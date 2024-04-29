@@ -1,0 +1,319 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+
+body {
+  background-image: url(../css/white-painted-wall-texture-background_53876-138197.png);
+  background-size: cover;
+  background-attachment: fixed;
+  margin:0px;
+}
+
+
+nav {
+  background-color: #dbdbdb;
+  display: flexbox;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: 0px 8px 150px 16px grey;
+}
+
+#logo {                                                  
+  display: inline-block;
+  margin: 3px 0px;
+  position: absolute;
+  right: 15px;
+  height: 75px;
+  width: 80px;
+  transition: all 1.5s 0.2s ease-in-out;
+  /* box-shadow: 0px 0px 10px 0px bisque;*/
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+#logo:hover {
+  transform: rotate(720deg);
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(2turn);
+  }
+
+}
+
+.title {
+  display: inline-block;
+  margin: 17px 22px;
+  position: absolute;
+  right: 150px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 35px;
+  font-weight: bolder;
+  /* background-image: url(../pictures/header.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text; */
+  color: #817c7c;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width:1150px){
+  .title{
+ display: none;
+  }
+}
+nav ul {
+  display: inline-flex;
+    /* padding: 9px; */
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    width: fit-content;
+    height: 82px;
+    transition: all 0.5s ease;
+}
+
+
+nav:hover {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.navi:hover {
+  background-color: #c9c9c9;
+  height: 150px;
+  border-radius: 17px;
+  box-shadow: 0px 5px 50px 15px rgba(78, 66, 66, 0.4);
+  cursor: pointer;
+}
+
+.navi:hover>.title {
+  opacity: 1;
+}
+
+.navi:hover>header h1 div {
+  opacity: 0;
+}
+
+.navi:hover>.footerc a {
+  font-size: small;
+}
+
+nav li {
+  position: relative;
+  display: flex;
+  /* margin-right: 70px; */
+  padding: 30px;
+  flex-direction: row;
+}
+
+nav a {
+  font-size: larger;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(138, 132, 132);
+}
+
+a:hover,
+a:focus {
+  color: rgb(41, 36, 36);
+  font: bold;
+}
+
+.footerc li {
+  display: inline-block;
+  /* width: fit-content;
+    height: fit-content; */
+  padding: 9px;
+  margin: 9px;
+  transition: inherit;
+  list-style: none;
+}
+
+.footerc a {
+  /* display:none; */
+  text-decoration: none;
+  color: rgb(138, 132, 132);
+  padding: 2px;
+font-size:small;   /* */
+  transition: all 0.065s 0.15s ease;
+}
+
+.footerc a:hover {
+  color: black;
+  font: bold;
+  transition: all 0s 0s ease;
+}
+
+
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+header h1 div {
+  margin: 25px 0px;
+  display: inline-flex;
+  text-transform: uppercase;
+  letter-spacing: 13px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 55px;
+  font-weight: bolder;
+  background-image: url(../pictures/header.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  pointer-events: none;
+  animation-name: up-and-down;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: all 0.5s ease;
+}
+
+header h1 div:hover {
+  cursor: pointer;
+}
+
+@keyframes up-and-down {
+  to {
+    opacity: 0.4;
+    transform: translateY(-25px);
+  }
+}
+
+
+.loi {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-rows:repeat(7,auto); */
+  gap: 10px 0px;
+  width: 100%;
+  list-style: none;
+  /* transform-style: preserve-3d;
+ perspective: 200px; */
+
+}
+
+li img {
+  display: grid;
+  min-width: 300px;
+  float: left;
+  outline-color: black;
+  transition: all 0.5s 0s ease;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 2px grey;
+  position: relative;
+  max-height: 150px;
+  min-height: 150px;
+  opacity: 0.9;
+  filter: blur(0.7px);
+
+}
+
+li img:hover {
+  opacity: 1;
+  transform:
+    /*translatez(50px)*/
+    scale(1.1);
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.4);
+  filter: blur(0);
+  border-radius: 5px;
+
+}
+
+li img:hover html {
+  opacity: 0.1;
+  width: 10px;
+}
+
+div label {
+  color: #2e4858;
+
+}
+
+#n {
+  color: black;
+  font-size: medium;
+}
+
+.formB {
+  display: inline-block;
+  width: fit-content;
+  background-color: #95b6b9c2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10%;
+  padding: 20px;
+  perspective: 300px;
+  perspective-origin: center center;
+  transition: all 0 0 ease;
+}
+
+div .save,
+.reset {
+  display: inline-block;
+  color: black;
+  /* width: fit-content; */
+  font-size: large;
+  margin-right: 15px;
+  padding: 0px 10px;
+}
+
+.op,
+.pi {
+  width: fit-content;
+  font-size: x-large;
+  color: #405b62;
+}
+
+::selection {
+  background-color: gray;
+  color: aliceblue;
+}
+
+.sec {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+  justify-items: center;
+  background-color: #eee;
+}
+
+.second {
+  background-image: url(../css/wallhaven-rdgwm7_3840x2160.png);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+}
+
+/* .lorem{
+    display: inline-block;
+    width:500px;
+    height:20px;
+    background-color: rgb(13, 255, 174);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lorem:hover{
+    overflow: visible;
+} */

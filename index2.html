@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="second">
+
+<head>
+   <title>
+      sign-in
+   </title>
+   <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+   <aside style="margin: -50px;">
+      <div class="formB">
+         <form method="get">
+            <p class="pi">Personal informations</p>
+            <div>
+               <input id="n" type="text" required placeholder="Enter your name" autofocus name="user" maxlength="20">
+               <label for="n" class="name">name</label>
+            </div>
+            <br>
+            <div>
+               <input id="num" type="number" min="18" max="120" name="age">
+               <label for="num" class="nu">age</label>
+            </div>
+            <br>
+            <div>
+               <input id="e" type="email" required value="the_usual@email" name="email" readonly>
+               <label for="e" class="em"> Email</label>
+            </div>
+            <br>
+            <div>
+               <input id="p" type="password" required placeholder="enter password" name="password" minlength="6"
+                  maxlength="15">
+               <label for="p" class="pass">Password</label>
+            </div>
+            <br>
+            <div>
+               <input id="c" type="color" placeholder="color">
+               <label for="c" class="co"> color</label>
+            </div>
+            <br>
+            <div>
+               <p class="op">
+                  Choose your operating system :)
+               </p>
+               <div>
+                  <input id="w" type="radio" name="os" checked>
+                  <label for="w">windows</label>
+               </div>
+               <div>
+                  <input id="m" type="radio" name="os">
+                  <label for="m">mac</label>
+               </div>
+               <div>
+                  <input id="l" type="radio" name="os">
+                  <label for="l">linux</label>
+               </div>
+            </div>
+            <br>
+            <div>
+               <label for="Hobbies">Hobbies</label>
+               <select required name="Hobbies" id="Hobbies">
+                  <optgroup label="Cars">
+                     <option value="1">driving </option>
+                     <option value="2">racing</option>
+                     <option value="3" selected>drifting</option>
+                  </optgroup>
+                  <optgroup label="sports">
+                     <option value="4">Swimming</option>
+                     <option value="5">Diving</option>
+                     <option value="6">Running</option>
+                  </optgroup>
+               </select>
+            </div>
+            <br>
+            <div>
+               Programming languages
+               <input list="programming" name="pls" required>
+               <datalist id="programming">
+                  <option value="C">
+                  <option value="C++">
+                  <option value="C#">
+                  <option value="Python">
+                  <option value="Php">
+                  <option value="Html">
+               </datalist>
+            </div>
+            <br>
+            <input id="sa" class="save" type="submit" value="save">
+            <input class="reset" type="reset" value="reset">
+      </div>
+      </form>
+      <br>
+      </div>
+   </aside>
+</body>
+
+</html>
